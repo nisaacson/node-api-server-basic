@@ -23,8 +23,9 @@ var requiredParams = {
     // 0 = server will assign a port. Can be any port number
   name: 'My server',
     // used in logging and if someone does curl --head http://your-server.com/
-  routes: aFunctionThatWillBeCalledToConfigureRoutes
+  routes: aFunctionThatWillBeCalledToConfigureRoutes,
     // will be called with opts that include opts.server == <the new server that was setup>
+  middleware: aFunctionWhichWillSetAllMiddleware // optionally set all middleware manually. will be called with a "server" parameter
 }
 
 var optionalParams = {
